@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="fixed inset-y-0 left-0 z-30 w-64 bg-gray-900 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0" 
+<div class="lg:w-64 bg-gray-900 flex-shrink-0 transform -translate-x-full transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:h-screen fixed inset-y-0 left-0 z-40" 
      :class="{ 'translate-x-0': sidebarOpen }" 
      x-show="sidebarOpen || window.innerWidth >= 1024" 
      @click.away="sidebarOpen = false">
@@ -26,7 +26,8 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="mt-6 px-4 pb-20 overflow-y-auto">
+    <div class="flex flex-col h-full">
+        <nav class="flex-1 px-4 pb-4 overflow-y-auto">
         <!-- Dashboard -->
         <a href="{{ route('dashboard') }}" 
            class="flex items-center px-4 py-3 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-colors mb-2 {{ request()->routeIs('dashboard') ? 'bg-gray-800 text-white' : '' }}">
@@ -132,7 +133,7 @@
     </nav>
 
     <!-- Bottom Section - User Profile -->
-    <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-700 bg-gray-900">
+        <div class="p-4 border-t border-gray-700 bg-gray-900">
         <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center">
                 <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,12 +153,13 @@
                     </svg>
                 </button>
             </form>
+            </div>
         </div>
     </div>
 </div>
 
 <!-- Overlay for mobile -->
 <div x-show="sidebarOpen" 
-     class="fixed inset-0 z-20 bg-black bg-opacity-50 lg:hidden" 
+     class="fixed inset-0 z-30 bg-black bg-opacity-50 lg:hidden" 
      @click="sidebarOpen = false">
 </div> 

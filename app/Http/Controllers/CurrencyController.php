@@ -18,8 +18,7 @@ class CurrencyController extends Controller
             return response()->json([
                 'success' => true,
                 'message' => 'Currency switched to ' . CurrencyHelper::getName($currency),
-                'currency' => $currency,
-                'symbol' => CurrencyHelper::getSymbol($currency)
+                'currency' => $currency
             ]);
         }
         
@@ -38,7 +37,6 @@ class CurrencyController extends Controller
         
         return response()->json([
             'currency' => $currentCurrency,
-            'symbol' => CurrencyHelper::getSymbol(),
             'name' => CurrencyHelper::getName(),
             'available_currencies' => CurrencyHelper::getAvailableCurrencies()
         ]);

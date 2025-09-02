@@ -15,15 +15,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-gray-50">
-        <div class="flex min-h-screen" x-data="{ sidebarOpen: false }">
-            
+        <div class="min-h-screen flex" x-data="{ sidebarOpen: false }">
+            <!-- Sidebar -->
             @include('layouts.sidebar')
 
             <!-- Main Content Area -->
-            <div class="flex-1 flex flex-col lg:pl-64">
-                
+            <div class="flex-1 flex flex-col min-w-0">
                 <!-- Top Header Bar -->
-                <header class="bg-white shadow-sm border-b border-gray-200 relative z-10">
+                <header class="bg-white shadow-sm border-b border-gray-200">
                     <div class="w-full px-6">
                         <div class="flex justify-between items-center py-4">
                                 <!-- Mobile menu button -->
