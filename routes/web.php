@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CurrencyController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,9 @@ Route::middleware('auth')->group(function () {
     
     // Products routes
     Route::resource('products', ProductController::class);
+    
+    // Categories routes
+    Route::resource('categories', CategoryController::class);
     
     // Suppliers routes
     Route::resource('suppliers', SupplierController::class);
