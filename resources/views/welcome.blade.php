@@ -7,6 +7,10 @@
         <title>{{ config('app.name', 'Laravel') }} - Next-Gen Inventory Management</title>
         <meta name="description" content="Transform your inventory operations with our intelligent, real-time management platform designed for modern businesses.">
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="{{ asset('images/favicon_ims.png') }}">
+        <link rel="shortcut icon" type="image/png" href="{{ asset('images/favicon_ims.png') }}">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700,800&display=swap" rel="stylesheet" />
