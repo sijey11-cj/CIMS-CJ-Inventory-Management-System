@@ -436,7 +436,7 @@
                             <!-- Logo/Brand -->
                             <div class="flex items-center space-x-3">
                                 <div class="w-12 h-12 bg-gradient-to-br from-slate-600 via-slate-500 to-blue-400 rounded-xl flex items-center justify-center shadow-lg animate-pulse-glow p-1">
-                                    <x-application-logo class="w-10 h-10" />
+                                    <x-application-logo class="w-14 h-14" />
                                 </div>
                                 <span class="text-xl font-bold text-slate-700 dark:text-slate-200">{{ config('app.name', 'InvenTech') }}</span>
                             </div>
@@ -573,7 +573,7 @@
                             <!-- Main Icon with stormy theme -->
                             <div class="mx-auto w-32 h-32 bg-gradient-to-br from-slate-600 via-slate-500 to-blue-400 rounded-3xl flex items-center justify-center shadow-2xl animate-float relative p-4">
                                 <div class="absolute inset-0 bg-gradient-to-br from-slate-400/50 to-blue-400/50 rounded-3xl blur-xl animate-pulse-glow"></div>
-                                <x-application-logo class="w-24 h-24 relative z-10" />
+                                <x-application-logo class="w-32 h-32 relative z-10" />
                             </div>
                             
                             <!-- Stats Grid -->
@@ -641,7 +641,7 @@
                     <div class="relative z-10 text-center space-y-6">
                         <!-- Main Icon with stormy theme -->
                         <div class="mx-auto w-24 h-24 bg-gradient-to-br from-slate-600 via-slate-500 to-blue-400 rounded-2xl flex items-center justify-center shadow-xl animate-float p-2">
-                            <x-application-logo class="w-20 h-20" />
+                            <x-application-logo class="w-28 h-28" />
                         </div>
                         
                         <!-- Stats Grid -->

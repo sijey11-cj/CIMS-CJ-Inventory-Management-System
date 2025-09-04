@@ -202,14 +202,14 @@
             <div class="absolute top-2/3 right-10 w-2.5 h-2.5 bg-blue-300/15 rounded-full animate-float-horizontal" style="animation-duration: 35s; animation-delay: -15s;"></div>
         </div>
 
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 relative z-10">
-            <div class="animate-float">
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-slate-600 hover:text-slate-700 transition-colors duration-300 drop-shadow-lg" />
+        <div class="min-h-screen flex flex-col sm:justify-center items-center relative z-10" style="padding-top: 2vh;">
+            <div class="animate-float mb-4">
+                <a href="/" class="block w-64">
+                    <x-application-logo class="w-full h-auto max-h-20" />
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-8 py-8 bg-white/95 backdrop-blur-xl shadow-2xl overflow-hidden sm:rounded-2xl border border-slate-200/50 relative group">
+            <div class="w-full sm:max-w-md mt-0 px-8 py-8 bg-white/95 backdrop-blur-xl shadow-2xl overflow-hidden sm:rounded-2xl border border-slate-200/50 relative group">
                 <!-- Decorative elements -->
                 <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-slate-400/10 to-blue-400/10 rounded-full blur-xl"></div>
                 <div class="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-300/10 to-slate-500/10 rounded-full blur-xl"></div>
