@@ -15,16 +15,18 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased bg-gray-50">
-        <div class="min-h-screen flex" x-data="{ sidebarOpen: false }">
+        <div class="min-h-screen flex" x-data="{ sidebarOpen: false, sidebarCollapsed: false }" x-init="console.log('Alpine initialized')">
             <!-- Sidebar -->
             @include('layouts.sidebar')
 
             <!-- Main Content Area -->
-            <div class="flex-1 flex flex-col min-w-0">
+            <div class="flex-1 flex flex-col min-w-0 transition-all duration-300 ease-in-out"
+                 :class="{ 'lg:ml-0': sidebarCollapsed, 'lg:ml-0': !sidebarCollapsed }">
                 <!-- Top Header Bar -->
                 <header class="bg-white shadow-sm border-b border-gray-200">
                     <div class="w-full px-6">
                         <div class="flex justify-between items-center py-4">
+                            <div class="flex items-center space-x-4">
                                 <!-- Mobile menu button -->
                                 <button @click="sidebarOpen = !sidebarOpen" 
                                         class="lg:hidden text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
@@ -39,6 +41,7 @@
                                         {{ $header }}
                                     </div>
                                 @endisset
+                            </div>
 
                                                 <!-- Top Right Actions -->
                 <div class="flex items-center space-x-8 ml-8">
